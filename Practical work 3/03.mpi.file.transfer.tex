@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+\title{Practical work 3}
+\author{Group 10}
+\date{March 2021}
+
+\begin{document}
+\maketitle
+\section{Why choose MPI implementation ?}
+I choose openMPI to install beacause it's easy to installation.
+\begin{itemize}
+    \item First, we install OpenMPI by command "sudo apt install libopenmpi-dev"
+    \item Second, we compile the MPI by command "mpicc <c-file> -o <file-name>
+    \item Third, we run MPI by command "mpirun -np <number of processes> <file-name>
+\end{itemize}
+
+\section{Design MPI service}
+\begin{itemize}
+\item The system has a root and a number of process. 
+\item User can send different file to each child process.
+\item The root process check the user input to see whether the file is valid
+\item The root process can sends the title and the content of the file separately to the child process using for loop through each child
+\end{itemize}
+\section{Organize the system}
+\centering
+\includegraphics[scale=0.35]{MPI.PNG}
+\end{document}
