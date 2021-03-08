@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\title{Practical work 2}
+\author{Group 10}
+\date{March 2021}
+
+\begin{document}
+\maketitle
+\section{Design RPC service}
+\includegraphics[scale=0.35]{RPC.PNG}
+
+\section{Organize the system}
+\begin{itemize}
+    \item To start rpcbind we use "service rpcbind start"
+    \item No special data structure
+    \item int send name(string) : to send file name from client to server
+    \item int send size(long int) : to send the file size from client to server
+    \item int send buffer (string) : to send buffer from client to server
+\end{itemize}
+All three function above return number 1 if succeed and we can only send a text file, more than one client connect at a time will be bugged.
+\section{Implementation}
+\end{document}
